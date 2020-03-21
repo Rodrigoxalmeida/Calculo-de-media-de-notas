@@ -55,20 +55,10 @@ public class Notas {
 	}
 	public static double mediaMaxMin(double n1, double n2, double n3) {
 			
-		double max = Math.max(n1, n2);
-		double max2 = Math.max(n1, n3);
-		double min = Math.min(n1, n2);
-		double min2 = Math.min(n1, n3);
+		double max = Notas.maxNota(n1, n2, n3);
+		double min = Notas.minNota(n1, n2, n3);
 		
-		if(max > max2 && min < min2) {
-			return (max + min) /2;
-		}else {
-			return (max2 + min2) / 2;
-		}
-		
-		
-		
-		
+		return (max + min) /2;
 	}
 
 }
